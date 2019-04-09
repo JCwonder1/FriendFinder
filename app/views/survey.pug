@@ -1,0 +1,147 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title FriendFinder
+    // Latest compiled and minified CSS & JS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    // Font Awesome Glyphicons
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
+    // Chosen
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js')
+  body
+    .container
+      h2 Survey Questions
+      hr
+      h3
+        strong About You
+      h4 Name (Required)
+      input#name.form-control(type='text', required='')
+      h4 Link to Photo Image (Required)
+      input#photo.form-control(type='text', required='')
+      hr
+      h3
+        strong Question 1
+      h4 Your mind is always buzzing with unexplored ideas and plans.
+      select#q1.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 2
+      h4 Generally speaking, you rely more on your experience than your imagination.
+      select#q2.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 3
+      h4 You find it easy to stay relaxed and focused even when there is some pressure.
+      select#q3.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 4
+      h4 You rarely do something just out of sheer curiosity.
+      select#q4.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 5
+      h4 People can rarely upset you.
+      select#q5.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 6
+      h4 It is often difficult for you to relate to other people’s feelings.
+      select#q6.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 7
+      h4 In a discussion, truth should be more important than people’s sensitivities.
+      select#q7.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 8
+      h4 You rarely get carried away by fantasies and ideas.
+      select#q8.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 9
+      h4
+        | You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+      select#q9.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      h3
+        strong Question 10
+      h4 You feel more energetic after spending time with a group of people.
+      select#q10.chosen-select
+        option(value='')
+        option(value='1') 1 (Strongly Disagree)
+        option(value='2') 2
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5 (Strongly Agree)
+      br
+      br
+      // Submit Button
+      button#submit.btn.btn-primary.btn-lg(type='submit')
+        |      Submit
+      hr
+    // Modal
+    #results-modal.modal.fade(role='dialog')
+      .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h2.modal-title
+              strong Best Match
+          .modal-body
+            h2#match-name
+            img#match-img(src='', alt='')
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+  script(src='js/main.js')

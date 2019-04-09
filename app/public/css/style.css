@@ -1,0 +1,22 @@
+.jumbotron {
+  
+  background-image: url("../images/omar-lopez-355586-unsplash.jpeg");
+  background-size: cover;
+}
+.backgroundMargin{
+    margin-top: 20%;
+    color: white;
+
+}
+
+.lead{
+    color: white;
+}
+
+.bgcolor{
+    background-color: #7A9DB8;
+}
+
+p { 
+    color: white;
+}

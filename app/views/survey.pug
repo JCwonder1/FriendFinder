@@ -11,6 +11,7 @@ html(lang='en')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
     // Chosen
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css')
+    link(rel='stylesheet', href='css/style.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js')
   body
     .container
@@ -127,9 +128,16 @@ html(lang='en')
       br
       br
       // Submit Button
-      button#submit.btn.btn-primary.btn-lg(type='submit')
+      button#submit.btn.btn-primary.btn-lg.btn-block(type='submit')
+        i.fa.fa-check-circle(aria-hidden='true')
         |      Submit
       hr
+      footer.footer
+        .container
+          p
+            a(href='/api/friends') API Friends List
+            |  
+            a(href='https://github.com/afhaque/friendfinder') GitHub Repo
     // Modal
     #results-modal.modal.fade(role='dialog')
       .modal-dialog
@@ -141,7 +149,7 @@ html(lang='en')
               strong Best Match
           .modal-body
             h2#match-name
-            img#match-img(src='', alt='')
+            img#match-img(src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg', alt='')
           .modal-footer
             button.btn.btn-default(type='button', data-dismiss='modal') Close
-  script(src='js/main.js')
+            script(src="js/main.js")

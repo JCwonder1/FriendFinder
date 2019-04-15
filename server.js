@@ -4,7 +4,6 @@ const app = express();
 const bodyParser = require('body-parser');
 
 
-
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './app/views'));
 
@@ -16,6 +15,6 @@ app.get('/favicon.ico', (req, res, next)=>{
     return res.sendStatus(204);
 });
 app.use('/', routes());
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 
 module.exports = app;
